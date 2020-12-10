@@ -1,0 +1,60 @@
+.text-danger {
+    color: white !important;
+}
+div.disable_server {
+    display: none;
+}
+div.enable_server{
+    display: block;
+    width: 100%;
+    height: auto;
+    background: red;
+    opacity: 60%;
+    margin: 0 auto;
+
+}
+.ul-error{
+    padding-left: 30px;
+}
+
+/* Validation Client */
+input.disable_message + span.error{
+    display: none;
+}
+select.disable_message + span.error{
+    display: none;
+}
+input.enable_message + span.error {
+    display: block !important;
+    color: white;
+    background-color: #CE5454;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 40%;
+    height: 100%;
+    border-radius: 3px 4px 4px 3px;
+    white-space: pre;
+    margin-left: 10px;
+    padding: 8px 10px;
+    transition: 0.15s ease-out;
+}
+select.enable_message + span.error {
+    display: block !important;
+    color: white;
+    background-color: #CE5454;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 40%;
+    height: 100%;
+    border-radius: 3px 4px 4px 3px;
+    white-space: pre;
+    margin-left: 20px;
+    padding: 8px 10px;
+    transition: 0.15s ease-out;
+}
+select.enable_border, input.enable_border {
+    border: 1px solid red !important;
+    color: black;
+}

@@ -1,0 +1,21 @@
+ /* Validation Server */
+ .text-danger {
+    color: white !important;
+}
+div.disable_server {
+    display: none;
+}
+div.enable_server{
+    display: block;
+    width: 100%;
+    height: auto;
+    background: red;
+    opacity: 60%;
+    z-index: 1;
+    margin: 0 auto;
+}
+.ul-error{
+    padding-left: 30px;
+}
+
+

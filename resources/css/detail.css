@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.h1 {
+    background-color: #343a40;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.search {
+    border-radius: 50%;
+}
