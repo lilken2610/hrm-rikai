@@ -44,14 +44,10 @@ trait AccessTokenTrait
      */
     public function initJwtConfiguration()
     {
-        $privateKeyPassPhrase = $this->privateKey->getPassPhrase();
-
-        $verificationKey = empty($privateKeyPassPhrase) ? InMemory::plainText('') : $privateKeyPassPhrase;
-
         $this->jwtConfiguration = Configuration::forAsymmetricSigner(
             new Sha256(),
-            LocalFileReference::file($this->privateKey->getKeyPath()),
-            $verificationKey
+            LocalFileReference::file($this->privateKey->getKeyPath(), $this->privateKey->getPassPhrase() ?? ''),
+            InMemory::plainText('')
         );
     }
 

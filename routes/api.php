@@ -35,12 +35,12 @@ Route::group([
     Route::get('get-reset-password/{token}', [AuthController::class, 'getChangePass']);
     Route::post('do-reset-password', [AuthController::class, 'postChangePass']);
     
+    Route::get('list-companies', [CompanyController::class, 'listCompanies']);
     Route::group([
         'middleware' => 'auth:api'
     ], function () {
         Route::delete('logout', [AuthController::class, 'logout']);
         Route::get('user', [AuthController::class, 'user']);
-        Route::get('list-companies', [CompanyController::class, 'listCompanies']);
         Route::get('search-companies', [CompanyController::class, 'searchCompanies']);
         Route::post('create-company', [CompanyController::class, 'store']);
         Route::delete('delete-company/{id}', [CompanyController::class, 'destroy']);
